@@ -1,9 +1,21 @@
+import { CustomerId } from "@org/domain-model/Customer";
+import {
+  AccountNumber,
+  AccountType,
+  AccountDetails,
+} from "@org/domain-model/Account";
+
 export interface CreateAccountArgs {
-  type: "debit" | "credit" | "deposit";
+  branchIdentifier: number;
+  accountType: AccountType;
+  customerId: CustomerId;
 }
 
-type AccountId = string;
+export const AccountRepositorySymbols = {
+  AccountRepository: Symbol.for("AccountRepository"),
+};
 
 export interface AccountRepository {
-  createAccount(createAccountArgs: CreateAccountArgs): Promise<AccountId>;
+  createAccount(createAccountArgs: CreateAccountArgs): Promise<AccountNumber>;
+  listCostumerAccounts(customerId: CustomerId): Promise<AccountDetails[]>;
 }

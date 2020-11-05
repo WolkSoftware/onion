@@ -1,0 +1,6 @@
+{
+    "verbose": true,
+    "watch": ["dist"],
+    "ignore": ["src/**/*"],
+    "exec": "node --require module-alias/register ./dist/4_main/main.js"
+}

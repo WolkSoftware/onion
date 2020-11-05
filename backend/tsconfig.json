@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "importHelpers": true,
       "lib": ["es2015"],
       "declaration": true,
       "declarationMap": true,
@@ -43,6 +44,9 @@
       },
       {
         "path": "./src/3_infrastructure/ioc"
+      },
+      {
+        "path": "./src/4_main"
       }
     ]
   }

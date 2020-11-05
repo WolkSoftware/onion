@@ -4,12 +4,40 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -b",
+    "start": "node --require module-alias/register ./dist/4_main/main.js",
+    "build-watch": "tsc -b --watch",
+    "start-watch": "nodemon",
+    "dev": "concurrently --kill-others \"npm run build-watch\" \"npm run start-watch\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@types/node": "^14.14.6"
+    "@nestjs/common": "7.5.1",
+    "@nestjs/core": "7.5.1",
+    "@nestjs/platform-express": "^7.5.1",
+    "@types/express": "^4.17.8",
+    "@types/node": "14.14.6",
+    "@types/pg": "7.14.6",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "pg": "8.4.2",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "6.6.3",
+    "tslib": "^2.0.3"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@org/domain-model": "./dist/0_domain_model",
+    "@org/domain-services": "./dist/1_domain_services",
+    "@org/app-services": "./dist/2_app_services",
+    "@org/infrastructure/dal": "./dist/3_infrastructure/dal",
+    "@org/infrastructure/http": "./dist/3_infrastructure/http",
+    "@org/infrastructure/ioc": "./dist/3_infrastructure/ioc"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.6"
   }
 }

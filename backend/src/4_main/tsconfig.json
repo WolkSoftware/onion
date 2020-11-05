@@ -1,0 +1,28 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "../../dist/4_main",
+      "rootDir": "."
+    },
+    "references": [
+          {
+            "path": "../0_domain_model"
+          },
+          {
+            "path": "../1_domain_services"
+          },
+          {
+            "path": "../2_app_services"
+          },
+          {
+            "path": "../3_infrastructure/http"
+          },
+          {
+            "path": "../3_infrastructure/dal"
+          },
+          {
+            "path": "../3_infrastructure/ioc"
+          }
+    ]
+  }
+  
