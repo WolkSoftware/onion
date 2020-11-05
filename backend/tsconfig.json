@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+      "lib": ["es2015"],
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,   
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "experimentalDecorators": true,
+      "emitDecoratorMetadata": true,
+      "forceConsistentCasingInFileNames": true,
+      "composite": true,
+          "baseUrl": "./",
+          "paths": {
+              "@org/domain-model/*": ["./src/0_domain_model/*"],
+              "@org/domain-services/*": ["./src/1_domain_services/*"],
+              "@org/app-services/*": ["./src/2_app_services/*"],
+              "@org/infrastructure/dal/*": ["./src/3_infrastructure/dal/*"],
+              "@org/infrastructure/http/*": ["./src/3_infrastructure/http/*"],
+              "@org/infrastructure/ioc/*": ["./src/3_infrastructure/ioc/*"]
+          }
+    },
+    "references": [
+      {
+        "path": "./src/0_domain_model"
+      },
+      {
+        "path": "./src/1_domain_services"
+      },
+      {
+        "path": "./src/2_app_services"
+      },
+      {
+        "path": "./src/3_infrastructure/dal"
+      },
+      {
+        "path": "./src/3_infrastructure/http"
+      },
+      {
+        "path": "./src/3_infrastructure/ioc"
+      }
+    ]
+  }

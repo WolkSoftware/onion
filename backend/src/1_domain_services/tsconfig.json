@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/1_domain_services",
+    "rootDir": "."
+  },
+  "references": [
+    {
+      "path": "../0_domain_model"
+    }
+  ]
+}
