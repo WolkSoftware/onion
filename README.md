@@ -1,10 +1,8 @@
 # Onion
 
-![](./docs/rings.png)
+A reference implementation of the [Onion Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html) powered by React, Nest.js, Jest and TypeScript.
 
-![](./docs/onion.png)
-
-![](./docs/onion_elements.jpg)
+![](./docs/directories.jpg)
 
 ## TypeScript Project References
 
